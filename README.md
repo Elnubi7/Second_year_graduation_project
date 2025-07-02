@@ -86,3 +86,16 @@ All connected directly to Firebase using:
 📊 [ExcelLogger + FirebaseClient] 
     ↓
 📱 [Flutter App - Live Visualization]
+
+------
+
+## 👥 Team Members
+
+| Name               | Role                                   |
+|--------------------|----------------------------------------|
+| Abdullah Nubi      | 🧠 AI Engineer / Performance Optimizer |
+| Abdelrahman Ahmed  | 🔗 Firebase Integration                |
+| Riad Elsayed       | 🎥 Data Collection & Camera Integration |
+| Ahd Hassan         | 🧠 AI Engineer                         |
+| Manar Alaa         | 📱 Flutter Developer                   |
+| Yostina Samah      | 📱 Flutter Developer                   |
