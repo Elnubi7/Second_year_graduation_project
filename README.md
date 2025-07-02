@@ -22,7 +22,7 @@ Detected activities are tracked, logged, and visualized through a Flutter mobile
 ## 🚀 Technologies Used
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,dart,flutter,firebase,tensorflow,opencv,git,github" alt="tech stack" />
+  <img src="https://skillicons.dev/icons?i=python,dart,flutter,firebase,pytorch,opencv,git,github" alt="tech stack" />
 </p>
 
 - **YOLOv8** – Object detection and activity classification  
