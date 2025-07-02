@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "275271621697",
+    "firebase_url": "https://employeeapp-6a763-default-rtdb.firebaseio.com",
+    "project_id": "employeeapp-6a763",
+    "storage_bucket": "employeeapp-6a763.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275271621697:android:8e8b918c420873ae8b3ac0",
+        "android_client_info": {
+          "package_name": "com.example.employee_monitoring"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUTTBkmdR1r3lAsv2cEhnEcCGgx1kdiJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275271621697:android:cea0005f9e98a8668b3ac0",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUTTBkmdR1r3lAsv2cEhnEcCGgx1kdiJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
