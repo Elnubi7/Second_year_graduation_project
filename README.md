@@ -1,74 +1,88 @@
-<h1 align="center">📊 Smart Desk AI</h1>
-<p align="center">
-  <img src="assets/demo.gif" alt="demo" width="80%" />
-</p>
+<h1 align="center">🧠 SmartDesk AI — Real-Time Employee Activity Monitoring</h1>
 
 <p align="center">
-  Real-time AI system that detects and logs workplace activities using YOLOv8 🔍 + Firebase 🔥 + Flutter 📱  
+A full-stack AI-powered system that detects, analyzes, and visualizes desk-level employee activities in real time, using YOLOv8, Firebase, and Flutter.
 </p>
 
 ---
 
-## 🧠 What is this project?
+## 📸 Project Description
 
-**Smart Desk AI** is an intelligent real-time monitoring system that detects and analyzes employee behavior at their desks using a custom-trained **YOLOv8** model.
+SmartDesk AI is a real-time monitoring system that uses a custom-trained YOLOv8 model to detect and classify employee activities such as:
 
-The system logs time spent on different activities like **Working**, **Eating**, **Sleeping**, and **Speaking on phone**.  
-It stores data in Firebase and Excel, while the **Flutter app** shows a live feed of activities with performance analysis.
+- 💻 Working  
+- 🍽️ Eating  
+- 📞 Speaking on Phone  
+- 😴 Sleeping  
 
----
-
-## 🚀 Features
-
-- 🧠 Real-time activity detection using YOLOv8
-- 🕒 Duration tracking per desk and per activity
-- ☁️ Firebase Realtime Database integration
-- 📊 Auto-generated Excel logs (per day)
-- 📱 Flutter app with pie charts, stars, and full history
+Detected activities are tracked, logged, and visualized through a Flutter mobile application with live Firebase integration.
 
 ---
 
-## 💻 Tech Stack
+## 🚀 Technologies Used
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"/>
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/>
-  <img src="https://img.shields.io/badge/YOLOv8-FF3C00?style=for-the-badge&logo=ultralytics&logoColor=white"/>
+  <img src="https://skillicons.dev/icons?i=python,dart,flutter,firebase,tensorflow,opencv,git,github" alt="tech stack" />
 </p>
+
+- **YOLOv8** – Object detection and activity classification  
+- **OpenCV** – Frame processing, hashing  
+- **Firebase Realtime Database** – Cloud data storage  
+- **Flutter** – Cross-platform mobile app  
+- **Excel (openpyxl)** – Local logging of time statistics  
+- **OOP Design + Threading + Queues + Hashing + LRU** – For efficient, modular, and optimized AI pipeline  
 
 ---
 
-## 📁 Project Structure
+## 📱 Flutter Mobile App Features
 
-```bash
-Second_year_graduation_project/
-│
-├── real-time/                   # 🎯 Real-time AI Detection + Logging (Python)
-│   ├── main.py                  # 🔁 Entry point for real-time detection loop
-│   ├── yolo_utils.py            # 🧠 YOLOv8 model + frame hashing & LRU caching
-│   ├── firebase_utils.py        # ☁️ Firebase Client with threaded queue system
-│   ├── excel_utils.py           # 📊 Handles Excel logs (daily activity logs)
-│   └── desk_monitor.py          # 🪑 DeskActivityMonitor: core AI activity handler
-│
-├── mobile_app/                  # 📱 Flutter app to visualize desk activities
-│   ├── lib/
-│   │   ├── main.dart            # 🧩 Entry point of Flutter app
-│   │   └── screens/             # 🖼️ Screens (realtime, history, performance chart)
-│   ├── pubspec.yaml             # 📦 Flutter dependencies & assets config
-│   └── android/ ios/ build/     # 📁 Auto-generated folders
-│
-├── weights/
-│   └── best.pt                  # 🔍 Custom-trained YOLOv8 weights
-│
-├── assets/                      # 🎞️ Demo images and GIFs
-│   ├── demo.gif
-│   ├── pie.png
-│   └── history.png
-│
-├── service_account.json         # 🔐 Firebase Admin SDK
-├── desk_times_history.xlsx      # 📊 Daily Excel logs
-├── requirements.txt             # 🧪 Python dependencies
-├── README.md
-└── LICENSE
+- Realtime updates (no refresh needed)
+- Shows:
+  - ⏱️ Activity start & end times
+  - 🕐 Duration in seconds, minutes, or hours
+  - 📈 Activity history (with scrollable logs)
+  - ⭐ Performance scores
+  - 🥧 Pie chart of activity distribution
+
+All connected directly to Firebase using:
+- `firebase_core`
+- `firebase_database`
+- `fl_chart`
+
+---
+
+## 🧠 AI & Backend System (YOLOv8)
+
+- 🧠 **Custom-trained YOLOv8 model** classifies activities directly from webcam feed  
+- 🧮 **Perceptual hashing** is used to avoid reprocessing repeated frames  
+- 🧠 **LRU Caching** ensures speed by caching frame detections (using `OrderedDict`)  
+- 🧪 Results are logged to:
+  - Realtime Firebase
+  - Excel sheets (per day)
+
+---
+
+## 🧠 Optimization Techniques
+
+| Technique | Why It's Used |
+|----------|---------------|
+| ✅ **Hashing** | Skip redundant frames to improve speed |
+| ✅ **LRU Cache** | Keep most recent 30 frames only, for memory efficiency |
+| ✅ **Threading + Queue** | Firebase updates handled in background thread |
+| ✅ **OOP Design** | Each class handles a clean, specific task |
+| ✅ **Competitive Programming** | Hashmaps, optimized loops, conditionals for peak performance |
+
+---
+
+## 🧩 Architecture
+
+```text
+📷 [Webcam Feed] 
+    ↓
+🧠 [YOLOv8 Detection + Frame Hashing] 
+    ↓
+🪑 [DeskActivityMonitor - Timer Updates] 
+    ↓
+📊 [ExcelLogger + FirebaseClient] 
+    ↓
+📱 [Flutter App - Live Visualization]
